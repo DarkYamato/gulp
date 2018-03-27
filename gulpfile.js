@@ -1,5 +1,3 @@
-'use strict';
-
 const gulp = require('gulp'),
  	  sass = require('gulp-sass'),
 	  autoprefixer = require('gulp-autoprefixer'),
@@ -13,8 +11,8 @@ const gulp = require('gulp'),
 	  cssnano = require('gulp-cssnano'),
 	  rename = require('gulp-rename'),
 	  imagemin = require('gulp-imagemin'),
-      cache = require('gulp-cache'),
-      del = require('del');
+      	  cache = require('gulp-cache'),
+          del = require('del');
 
 gulp.task('sass', () => {
 	gulp.src('src/scss/**/*.scss')
