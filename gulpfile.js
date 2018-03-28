@@ -11,8 +11,8 @@ const gulp = require('gulp'),
 	  cssnano = require('gulp-cssnano'),
 	  rename = require('gulp-rename'),
 	  imagemin = require('gulp-imagemin'),
-      cache = require('gulp-cache'),
-      del = require('del');
+      	  cache = require('gulp-cache'),
+          del = require('del');
 
     gulp.task('sass', () => {
     	return gulp.src('src/scss/main.scss')
