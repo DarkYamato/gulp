@@ -23,7 +23,7 @@
     "gulp-useref": "^3.1.5"
   },
   "scripts": {
-    "start": "./node_modules/.bin/gulp fonts"
+    "start": "./node_modules/.bin/gulp dev"
   },
   "author": "",
   "license": "ISC"
