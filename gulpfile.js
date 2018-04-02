@@ -11,11 +11,12 @@ const gulp = require('gulp'),
 	  imagemin = require('gulp-imagemin'),
       cache = require('gulp-cache'),
       del = require('del'),
-      newer = require('gulp-newer');
+      newer = require('gulp-newer'),
+      notify = require('gulp-notify');
 
     gulp.task('sass', () =>
     	gulp.src('src/scss/main.scss')
-    		.pipe(plumber())
+    		.pipe(plumber({errorHandler: notify.onError()}))
             .pipe(autoprefixer())
     		.pipe(sourcemaps.init())
     		.pipe(sass())
@@ -46,7 +47,7 @@ const gulp = require('gulp'),
 
     gulp.task('scripts', () =>
 	       gulp.src('src/js/one.js', 'src/js/two.js')
-		         .pipe(plumber())
+		         .pipe(plumber({errorHandler: notify.onError()}))
                  .pipe(sourcemaps.init())
                  .pipe(concat('main.js'))
 		         .pipe(uglify())
